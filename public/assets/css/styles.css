@@ -1,0 +1,76 @@
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.font-normal {
+  font-style: normal;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.fixed-table-toolbar {
+  display: flex;
+  width: 100%;
+}
+
+.fixed-table-toolbar .bs-bars {
+  width: 75%;
+}
+
+.fixed-table-toolbar .btn {
+  margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+  .fixed-table-toolbar {
+    flex-wrap: wrap;
+  }
+  .fixed-table-toolbar .btn {
+    margin-bottom: 5px;
+  }
+}
+
+.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.active-variant {
+  border-color: var(--fn-btn-hover-border-color);
+}
+
+.ginner-container {
+  max-width: 100% !important;
+}
+
+.backdrop-hero {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
+  width: 100%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+}
+
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.fab-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.fab-btn:hover {
+  background-color: #0056b3;
+}
