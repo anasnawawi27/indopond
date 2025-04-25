@@ -10,9 +10,9 @@
 
     <!-- SEO Meta Tags -->
     <title><?= $title ?></title>
-    <meta name="description" content="Finder - Directory &amp; Listings Bootstrap HTML Template">
-    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
-    <meta name="author" content="Createx Studio">
+    <meta name="description" content="Jasa Percetakan Andalan Kamu">
+    <meta name="keywords" content="indopond, jasa percetakan, poster, banner">
+    <meta name="author" content="indopond">
 
     <!-- Webmanifest + Favicon / App icons -->
     <meta name="mobile-web-app-capable" content="yes">

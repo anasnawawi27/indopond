@@ -58,7 +58,7 @@ class Customer extends BaseController
         $this->data['left_toolbar'] = sprintf(lang('Common.btn.add'), route_to('customer_form', 0), lang('Customer.add_heading'));
         $this->data['toolbar'] = view('table-toolbar/default', $this->data);
 
-        return view('list_default', $this->data);
+        return view('list', $this->data);
     }
 
     public function form($id)
@@ -114,7 +114,7 @@ class Customer extends BaseController
 
         $this->data['title'] = ($data ? lang('Common.edit') : lang('Common.add')) . ' ' . lang('Customer.heading');
         $this->data['heading'] = $this->data['title'];
-        return view('form_default', $this->data);
+        return view('form', $this->data);
     }
 
     public function get_list()

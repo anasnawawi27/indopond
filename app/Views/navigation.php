@@ -139,10 +139,10 @@
                     </ul>
                 </div>
             <?php else : ?>
-                <a class="btn btn-outline-dark animate-shake" href="<?= route_to('login') ?>">
+                <!-- <a class="btn btn-outline-dark animate-shake" href="<?= route_to('login') ?>">
                     <i class="fi-user fs-base animate-target ms-n1 me-1 me-sm-2"></i>
                     Sign in
-                </a>
+                </a> -->
             <?php endif ?>
 
         </div>

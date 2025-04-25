@@ -1,14 +1,15 @@
 <?php $this->extend('layout/default-admin') ?>
 <?php $this->section('content') ?>
-<div class="content-header-left col-md-6 col-12 my-2 breadcrumb-new">
-    <h2 class="content-header-title mb-0 d-inline-block"><?php echo $heading ?></h2>
+<div class="col-lg-9">
+    <h1 class="h2 pb-2 pb-lg-3"><?php echo $heading ?></h1>
     <div class="row breadcrumbs-top d-inline-block">
         <div class="breadcrumb-wrapper col-12">
             <?php echo isset($breadcrumb) ? $breadcrumb : ''; ?>
         </div>
     </div>
+    <?php echo $this->include('table') ?>
 </div>
-<?php echo $this->include('table') ?>
+
 <?php $this->endSection(); ?>
 
 <?php $this->section('plugin_css'); ?>

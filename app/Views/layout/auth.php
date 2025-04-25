@@ -1,66 +1,137 @@
 <!DOCTYPE html>
-<html class="loading" lang="en" data-textdirection="ltr">
+<html lang="en" data-bs-theme="light" data-pwa="true">
+<!-- Mirrored from finder-html.createx.studio/account-signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Nov 2024 07:48:27 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-  <meta name="description" content="Modern admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities with bitcoin dashboard.">
-  <meta name="keywords" content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
-  <meta name="author" content="PIXINVENT">
-  <title><?php echo $title ?></title>
-  <link
-    rel="shortcut icon"
-    type="image/x-icon"
-    href="<?= base_url('assets/images/favicon/favicon.ico') ?>" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
+  <meta charset="utf-8">
 
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('vendors/css/vendors.min.css') ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/bootstrap.min.css') ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/bootstrap-extended.min.css') ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/components.min.css') ?>">
-  <link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css') ?>">
+  <!-- Viewport -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
-  <link rel="apple-touch-icon" sizes="57x57" href="<?php echo base_url() ?>/favicon/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="<?php echo base_url() ?>/favicon/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo base_url() ?>/favicon/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() ?>/favicon/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo base_url() ?>/favicon/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="<?php echo base_url() ?>/favicon/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="<?php echo base_url() ?>/favicon/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="<?php echo base_url() ?>/favicon/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="<?php echo base_url() ?>/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="<?php echo base_url() ?>/favicon/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="<?php echo base_url() ?>/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="<?php echo base_url() ?>/favicon/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="<?php echo base_url() ?>/favicon/favicon-16x16.png">
-  <script src="<?php echo base_url('js/language/en.js'); ?>"></script>
+  <!-- SEO Meta Tags -->
+  <title><?= $title ?></title>
+  <meta name="description" content="Jasa Percetakan Andalan Kamu">
+  <meta name="keywords" content="indopond, jasa percetakan, poster, banner">
+  <meta name="author" content="indopond">
+
+  <!-- Webmanifest + Favicon / App icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
+
+  <!-- Theme switcher (color modes) -->
+  <script src="assets/js/theme-switcher.js"></script>
+
+  <!-- Preloaded local web font (Inter) -->
+  <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
+
+  <!-- Font icons -->
+  <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
+
+  <!-- Bootstrap + Theme styles -->
+  <link rel="preload" href="assets/css/theme.min.css" as="style">
+  <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
+  <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
+
+  <!-- Customizer -->
+  <script src="assets/js/customizer.min.js"></script>
 </head>
 
-<body class="vertical-layout vertical-menu-modern 1-column  bg-full-screen-image blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
-  <div class="app-content content">
-    <div class="content-overlay"></div>
-    <div class="content-wrapper">
-      <div class="content-header row">
-      </div>
-      <div class="content-body">
-        <section class="row flexbox-container">
-          <div class="col-12 d-flex align-items-center justify-content-center">
-            <?php $this->renderSection('content') ?>
+
+<!-- Body -->
+
+<body>
+
+
+  <!-- Page content -->
+  <main class="content-wrapper w-100 px-3 ps-lg-5 pe-lg-4 mx-auto" style="max-width: 1920px">
+    <div class="d-lg-flex">
+
+      <!-- Login form + Footer -->
+      <div class="d-flex flex-column min-vh-100 w-100 py-4 mx-auto me-lg-5" style="max-width: 416px">
+
+        <!-- Logo -->
+        <header class="navbar px-0 pb-4 mt-n2 mt-sm-0 mb-2 mb-md-3 mb-lg-4">
+          <a class="navbar-brand pt-0" href="index.html">
+            <span class="d-flex flex-shrink-0 text-primary rtl-flip me-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34">
+                <path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path>
+                <g fill-rule="evenodd">
+                  <path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path>
+                  <g fill="#fff">
+                    <path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path>
+                    <path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path>
+                  </g>
+                </g>
+                <path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path>
+                <path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path>
+              </svg>
+            </span>
+            Finder
+          </a>
+        </header>
+
+        <h1 class="h2 mt-5">Welcome back</h1>
+        <div class="nav fs-sm mb-4">
+          Don't have an account?
+          <a class="nav-link text-decoration-underline p-0 ms-2" href="account-signup.html">Create an account</a>
+        </div>
+
+        <!-- Form -->
+        <form class="needs-validation" novalidate="">
+          <div class="position-relative mb-4">
+            <input type="email" class="form-control form-control-lg" placeholder="Email" required="">
+            <div class="invalid-tooltip bg-transparent py-0">Enter a valid email address!</div>
           </div>
-        </section>
+          <div class="mb-4">
+            <div class="password-toggle">
+              <input type="password" class="form-control form-control-lg" placeholder="Password" required="">
+              <div class="invalid-tooltip bg-transparent py-0">Password is incorrect!</div>
+              <label class="password-toggle-button fs-lg" aria-label="Show/hide password">
+                <input type="checkbox" class="btn-check">
+              </label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <div class="form-check me-2">
+              <input type="checkbox" class="form-check-input" id="remember-30">
+              <label for="remember-30" class="form-check-label">Remember for 30 days</label>
+            </div>
+            <div class="nav">
+              <a class="nav-link animate-underline p-0" href="account-password-recovery.html">
+                <span class="animate-target">Forgot password?</span>
+              </a>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-lg btn-primary w-100">Sign In</button>
+        </form>
+
+        <!-- Divider -->
+        <div class="d-flex align-items-center my-4">
+          <hr class="w-100 m-0">
+          <span class="text-body-emphasis fw-medium text-nowrap mx-4">or continue with</span>
+          <hr class="w-100 m-0">
+        </div>
+      </div>
+
+
+      <!-- Cover image visible on screens > 992px wide (lg breakpoint) -->
+      <div class="d-none d-lg-block w-100 py-4 ms-auto" style="max-width: 1034px">
+        <div class="d-flex flex-column justify-content-end h-100 bg-info-subtle rounded-5">
+          <div class="ratio">
+            <img src="assets/img/account/account-cover.png" alt="Girl">
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
 
-  <script src="<?php echo base_url('vendors/js/vendors.min.js') ?>"></script>
-  <script src="<?php echo base_url('vendors/feather.min.js') ?>"></script>
-  <script src="<?php echo base_url('vendors/js/forms/select/select2.min.js'); ?>"></script>
-  <script src="<?php echo base_url('vendors/jquery.validate.min.js'); ?>"></script>
-  <script src="<?php echo base_url('vendors/jquery.form.min.js'); ?>"></script>
-  <script src="<?php echo base_url('js/form.js'); ?>"></script>
-  <script src="<?php echo base_url('js/app.js'); ?>"></script>
-  <?php $this->renderSection('custom_js') ?>
+  <script src="assets/js/theme.min.js"></script>
 
 </body>
 

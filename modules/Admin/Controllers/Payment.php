@@ -57,7 +57,7 @@ class Payment extends BaseController
         $this->data['left_toolbar'] = sprintf(lang('Common.btn.add'), route_to('payment_form', 0), lang('Payment.add_heading'));
         $this->data['toolbar'] = view('table-toolbar/default', $this->data);
 
-        return view('list_default', $this->data);
+        return view('list', $this->data);
     }
 
     public function form($id)
@@ -113,7 +113,7 @@ class Payment extends BaseController
 
         $this->data['title'] = ($data ? lang('Common.edit') : lang('Common.add')) . ' ' . lang('Payment.heading');
         $this->data['heading'] = $this->data['title'];
-        return view('form_default', $this->data);
+        return view('form', $this->data);
     }
 
     public function get_list()

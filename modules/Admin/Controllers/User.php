@@ -96,7 +96,7 @@ class User extends BaseController
         $this->data['data'] = $data;
         $this->data['title'] = lang('Users.edit_heading');
         $this->data['heading'] = $this->data['title'];
-        return view('form_default', $this->data);
+        return view('form', $this->data);
     }
 
 

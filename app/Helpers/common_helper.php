@@ -26,29 +26,6 @@ if (!function_exists('rupiah')) {
     }
 }
 
-if (!function_exists('settings')) {
-
-    function settings($key)
-    {
-        if ($key) {
-            $session = service('session');
-            if ($session->has('settings')) {
-                return $session->get('settings')[$key];
-            } else {
-                $db = \Config\Database::connect();
-                $settings = $db->table('settings')->get()->getResult();
-                foreach ($settings as $setting) {
-                    $data[$setting->key] = $setting->value;
-                }
-                $session->set('settings', $data);
-                return $data[$key];
-            }
-        } else {
-            return false;
-        }
-    }
-}
-
 if (!function_exists('set_password')) {
 
     function set_password(string $password)
@@ -93,43 +70,25 @@ if (!function_exists('decode')) {
     }
 }
 
-if (!function_exists('in_groups')) {
-    function in_groups($group)
+if (!function_exists('setting')) {
+    function setting($key)
     {
-        $db = db_connect();
-        $builder = $db->table('auth_groups_users a');
-        $builder->join('auth_groups b', 'b.id = a.group_id', 'left');
-        $builder->where(['a.user_id' => user_id(), 'b.name' => $group]);
-        $data = $builder->find();
-        if ($data) {
-            return true;
+        if ($key) {
+            $session = service('session');
+            if ($session->has('settings')) {
+                return $session->get('settings')[$key];
+            } else {
+                $db = \Config\Database::connect();
+                $settings = $db->table('settings')->get()->getResult();
+                foreach ($settings as $setting) {
+                    $data[$setting->key] = $setting;
+                }
+                $session->set('settings', $data);
+                dd($data[$key]);
+                return $data[$key];
+            }
         } else {
             return false;
         }
     }
 }
-
-if (!function_exists('setting')) {
-    function setting($key)
-    {
-        $db = db_connect();
-        $builder = $db->table('settings')->select('*')->where('key', $key);
-
-        $result = $builder->get()->getRow();
-        return $result ? $result : null;
-    }
-}
-
-// if (!function_exists('html_escape')) {
-//     function html_escape($var, bool $doubleEncode = true)
-//     {
-//         if (is_array($var)) {
-//             foreach ($var as $key => $value) {
-//                 $var[$key] = html_escape($value, $doubleEncode);
-//             }
-//             return $var;
-//         }
-
-//         return htmlspecialchars($var, ENT_QUOTES, 'UTF-8', $doubleEncode);
-//     }
-// }

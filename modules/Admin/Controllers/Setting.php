@@ -85,7 +85,7 @@ class Setting extends BaseController
         $this->data['breadcrumb'] = $breadcrumb->render();
         $this->data['title'] = lang('Setting.heading');
         $this->data['heading'] = $this->data['title'];
-        return view('form_default', $this->data);
+        return view('form', $this->data);
     }
 
     public function save()
